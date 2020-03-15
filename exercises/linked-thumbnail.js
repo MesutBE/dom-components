@@ -1,7 +1,30 @@
 try {
 
   function linkedThumbnail(obj) {
+    const divEl = document.createElement('DIV');
+    divEl.className = 'thumbnail-container';
 
+    const aEl = document.createElement('A');
+    aEl.target = '_blank';
+    aEl.href = obj.src;
+    aEl.className = "to-the-right";
+
+    const imgEl = document.createElement('IMG');
+    imgEl.src = obj.src;
+    debugger;
+    if (obj.color === 'black') {
+      imgEl.setAttribute('class', "thumbnail to-the-right");
+    }else {
+      imgEl.setAttribute('class', 'thumbnail');
+    }
+      
+    
+    imgEl.alt = "the color black";
+
+    aEl.appendChild(imgEl);
+    divEl.appendChild(aEl);
+
+    return divEl;
   }
 
   testComponent.attributesToTest = [

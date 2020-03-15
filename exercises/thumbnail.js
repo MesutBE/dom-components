@@ -1,7 +1,29 @@
 try {
 
   function thumbnail(obj) {
-    // write me!
+    const divEl = document.createElement('DIV');
+    divEl.className = 'thumbnail-container';
+
+    const imgEl = document.createElement('IMG');
+    imgEl.src = obj.src;
+    imgEl.className = 'thumbnail to-the-right';
+    debugger;
+    
+    switch (obj.color){
+      case "black":
+        imgEl.alt = 'the color ' + obj.color;
+        break;
+      case "red":
+        imgEl.alt = 'the color ' + obj.color;
+        break;
+      case "purple":
+        imgEl.alt = 'the color ' + obj.color;
+        break;
+    }
+
+    aEl.appendChild(imgEl);
+
+    return divEl;
   }
 
 

@@ -1,7 +1,15 @@
 try {
 
   function linkedButton(arr) {
-    // write me! (after studying some examples ;)
+    const aEl = document.createElement('A');
+    aEl.target = "_blank";
+    aEl.href = arr[1];
+
+    const btnEl = document.createElement('BUTTON');
+    btnEl.innerText = 'learn about ' + arr[0];
+
+    aEl.appendChild(btnEl);
+    return aEl;
   }
 
 
