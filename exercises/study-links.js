@@ -2,23 +2,24 @@ try {
 
   function studyLinks(obj) {
     const h3El = document.createElement('h3');
-    ; // set the h3's innerText
+    h3El.innerText = obj.topic;
 
     const ulEl = document.createElement('ul');
     Object.keys(obj.links).forEach(key => {
       const aEl = document.createElement('a');
-      // set the aEl's properties
-      //
-      //
+      aEl.innerText = 'js.info';
+      aEl.href = key;
+      aEl.target = '_blank';
 
       const liEl = document.createElement('li');
-      // append the aEl & liEl
-      //
+      liEl.appendChild(aEl);
+
     });
+    ulEl.appendChild(liEl)
+    h3El.appendChild(ulEl);
 
     const divEl = document.createElement('div');
-    // append the header & list
-    //
+    divEl.appendChild(h3El)
   }
 
 
